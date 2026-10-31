@@ -1,0 +1,127 @@
+{
+  "name": "css-tweaker",
+  "icon": "icon.png",
+  "displayName": "CSS Tweaker",
+  "description": "Adjust CSS numeric values directly using keyboard shortcuts.",
+  "version": "0.1.0",
+  "publisher": "pablopeanutbar/Shariq",
+  "type": "module",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "css",
+    "css editor",
+    "developer tools",
+    "numeric values",
+    "css tweaker"
+  ],
+  "main": "./src/extension.js",
+  "activationEvents": [
+    "onLanguage:css"
+  ],
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "cssTweaker.increaseValue",
+        "title": "Increase Value",
+        "category": "CSS Tweaker"
+      },
+      {
+        "command": "cssTweaker.decreaseValue",
+        "title": "Decrease Value",
+        "category": "CSS Tweaker"
+      },
+      {
+        "command": "cssTweaker.increaseTen",
+        "title": "Increase by 10",
+        "category": "CSS Tweaker"
+      },
+      {
+        "command": "cssTweaker.decreaseTen",
+        "title": "Decrease by 10",
+        "category": "CSS Tweaker"
+      },
+      {
+        "command": "cssTweaker.increaseDecimal",
+        "title": "Increase by 0.1",
+        "category": "CSS Tweaker"
+      },
+      {
+        "command": "cssTweaker.decreaseDecimal",
+        "title": "Decrease by 0.1",
+        "category": "CSS Tweaker"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "cssTweaker.increaseValue",
+        "key": "up",
+        "when": "editorTextFocus && editorLangId == css && cssTweaker.valueAtCursor"
+      },
+      {
+        "command": "cssTweaker.decreaseValue",
+        "key": "down",
+        "when": "editorTextFocus && editorLangId == css && cssTweaker.valueAtCursor"
+      },
+      {
+        "command": "cssTweaker.increaseTen",
+        "key": "shift+up",
+        "when": "editorTextFocus && editorLangId == css && cssTweaker.valueAtCursor"
+      },
+      {
+        "command": "cssTweaker.decreaseTen",
+        "key": "shift+down",
+        "when": "editorTextFocus && editorLangId == css && cssTweaker.valueAtCursor"
+      },
+      {
+        "command": "cssTweaker.increaseDecimal",
+        "key": "alt+up",
+        "when": "editorTextFocus && editorLangId == css && cssTweaker.valueAtCursor"
+      },
+      {
+        "command": "cssTweaker.decreaseDecimal",
+        "key": "alt+down",
+        "when": "editorTextFocus && editorLangId == css && cssTweaker.valueAtCursor"
+      }
+    ],
+    "configuration": {
+      "title": "CSS Tweaker",
+      "properties": {
+        "cssTweaker.steps.normal": {
+          "type": "number",
+          "default": 1,
+          "minimum": 0.001,
+          "description": "Increment/decrement amount for Up and Down."
+        },
+        "cssTweaker.steps.large": {
+          "type": "number",
+          "default": 10,
+          "minimum": 0.001,
+          "description": "Increment/decrement amount for Shift + Up and Shift + Down."
+        },
+        "cssTweaker.steps.precise": {
+          "type": "number",
+          "default": 0.1,
+          "minimum": 0.001,
+          "description": "Increment/decrement amount for Alt + Up and Alt + Down."
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "postcss": "^8.5.32",
+    "postcss-safe-parser": "^7.1.0",
+    "postcss-value-parser": "^4.2.0"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^4.1.0"
+  }
+}
