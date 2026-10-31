@@ -10,13 +10,13 @@
     "vscode": "^1.80.0"
   },
   "repository": {
-  "type": "git",
-  "url": "https://github.com/pablopeanutbar/css-tweaker.git"
-},
-"homepage": "https://github.com/pablopeanutbar/css-tweaker#readme",
-"bugs": {
-  "url": "https://github.com/pablopeanutbar/css-tweaker/issues"
-},
+    "type": "git",
+    "url": "https://github.com/pablopeanutbar/css-tweaker.git"
+  },
+  "homepage": "https://github.com/pablopeanutbar/css-tweaker#readme",
+  "bugs": {
+    "url": "https://github.com/pablopeanutbar/css-tweaker/issues"
+  },
   "categories": [
     "Other"
   ],
