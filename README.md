@@ -8,6 +8,8 @@ Inspired by the convenience of Chrome DevTools, it brings quick CSS value adjust
 
 [**Install CSS Tweaker**](https://marketplace.visualstudio.com/items?itemName=pablopeanutbar.css-tweaker) · [Report a Bug](https://github.com/pablopeanutbar/css-tweaker/issues)
 
+ [**GitHub Repository**](https://github.com/pablopeanutbar/css-tweaker)
+
 ---
 
 ## Features
