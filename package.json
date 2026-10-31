@@ -4,7 +4,7 @@
   "displayName": "CSS Tweaker",
   "description": "Adjust CSS numeric values directly using keyboard shortcuts.",
   "version": "0.1.0",
-  "publisher": "pablopeanutbar/Shariq",
+  "publisher": "pablopeanutbar",
   "type": "module",
   "engines": {
     "vscode": "^1.80.0"
