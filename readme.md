@@ -1,18 +1,27 @@
 # CSS Tweaker
 
-Adjust CSS numeric values directly inside VS Code using your keyboard.
+**Adjust CSS values directly inside VS Code using keyboard shortcuts.**
 
-No DevTools, no manual editing of numbers, and no switching between your editor and browser.
+CSS Tweaker lets you increment and decrement numeric CSS values right from your editor, without manually selecting and editing numbers.
+
+Inspired by the convenience of Chrome DevTools, it brings quick CSS value adjustments directly into your VS Code workflow.
+
+[**Install CSS Tweaker**](https://marketplace.visualstudio.com/items?itemName=pablopeanutbar.css-tweaker) · [Report a Bug](https://github.com/pablopeanutbar/css-tweaker/issues)
+
+---
 
 ## Features
 
-- Increase and decrease CSS numeric values directly in the editor.
-- Supports pixels, percentages, rem, em, viewport units, degrees, milliseconds and more.
-- Works with decimal and negative values.
-- Supports values inside `calc()` and CSS custom properties.
-- Ignores numbers inside comments and strings.
-- Configurable adjustment steps.
-- Changes are part of your normal editor history, so you can undo them with `Ctrl + Z`.
+- **Quick adjustments:** Increase or decrease CSS values using keyboard shortcuts.
+- **Multiple adjustment steps:** Make normal, large, or precise adjustments.
+- **Unit support:** Works with `px`, `%`, `rem`, `em`, `deg`, and other CSS units.
+- **Decimal support:** Handles decimal and negative values.
+- **Unitless values:** Adjust values such as `opacity`, `z-index`, and more.
+- **Smart detection:** Identifies numeric values inside CSS declarations.
+- **Calc support:** Adjust values inside `calc()` expressions.
+- **CSS custom properties:** Supports variables such as `--spacing` and `--radius`.
+- **Safe editing:** Ignores numeric values inside comments and strings.
+- **Undo support:** Use `Ctrl + Z` to revert your changes.
 
 ## Keyboard Shortcuts
 
@@ -25,49 +34,58 @@ No DevTools, no manual editing of numbers, and no switching between your editor 
 | `Alt + ↑` | Increase by 0.1 |
 | `Alt + ↓` | Decrease by 0.1 |
 
-Shortcuts activate when your cursor is positioned on a supported CSS numeric value.
+Shortcuts activate when your cursor is positioned on a supported numeric CSS value. Normal arrow-key navigation remains unaffected elsewhere.
 
 ## Configuration
 
-Customize the adjustment amounts through VS Code Settings.
+You can customize the adjustment steps through VS Code settings.
 
-Search for **CSS Tweaker** in Settings.
+Open **Settings** (`Ctrl + ,`) and search for `CSS Tweaker`.
 
-| Setting | Default |
-|---|---:|
-| `cssTweaker.steps.normal` | 1 |
-| `cssTweaker.steps.large` | 10 |
-| `cssTweaker.steps.precise` | 0.1 |
+| Setting | Default | Description |
+|---|---:|---|
+| `cssTweaker.steps.normal` | `1` | Normal adjustment step |
+| `cssTweaker.steps.large` | `10` | Large adjustment step |
+| `cssTweaker.steps.precise` | `0.1` | Precise adjustment step |
 
 ## Example
 
 Before:
 
 ```css
-.box {
+.card {
     width: 300px;
     opacity: 0.5;
+    margin: -20px;
     transform: rotate(45deg);
+    padding: calc(100% - 20px);
 }
 ```
 
-Place your cursor on `300px` and press `↑`.
+Place your cursor on a numeric value and use the shortcuts to adjust it instantly.
 
-After:
+For example, pressing `Shift + ↑` on `300px` changes it to `310px`.
 
-```css
-.box {
-    width: 301px;
-    opacity: 0.5;
-    transform: rotate(45deg);
-}
-```
+## Installation
 
-## Requirements
+1. Open [CSS Tweaker on the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=pablopeanutbar.css-tweaker).
+2. Click **Install**.
+3. Open a CSS file and place your cursor on a numeric value.
+4. Use the keyboard shortcuts to adjust it.
 
-- Visual Studio Code 1.80.0 or later.
-- A CSS file.
+## Supported Language
 
-## Support
+Currently supports **CSS** files.
 
-Found a bug or have a feature request? Open an issue in the project's GitHub repository.
+## Feedback & Contributions
+
+Found a bug or have an idea for improvement?
+
+- [Report an Issue](https://github.com/pablopeanutbar/css-tweaker/issues)
+- [View Source Code](https://github.com/pablopeanutbar/css-tweaker)
+
+Contributions and suggestions are welcome!
+
+---
+
+**Made with ❤️ for developers who like tweaking CSS without the extra clicks.**
